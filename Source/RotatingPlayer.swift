@@ -1,7 +1,7 @@
 import UIKit
 import MediaPlayer
 
-public protocol RotatingPlayerDelegate {
+public protocol RotatingPlayerDelegate: class {
   func rotatingPlayerWasDismissed()
 }
 

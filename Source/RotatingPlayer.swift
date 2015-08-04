@@ -8,7 +8,7 @@ public protocol RotatingPlayerDelegate {
   public class RotatingPlayer: UIViewController {
 
   public var isPresented = true
-  public var delegate: VideoControllerDelegate?
+  public var delegate: RotatingPlayerDelegate?
   public var player: MPMoviePlayerController
 
   public init(url: NSURL, delegate: VideoControllerDelegate? = nil) {
@@ -53,7 +53,7 @@ public protocol RotatingPlayerDelegate {
   }
 
   override public func viewDidDisappear(animated: Bool) {
-    delegate?.videoControllerWasDismissed()
+    delegate?.rotatingPlayerWasDismissed()
   }
 
   override public func viewWillDisappear(animated: Bool) {

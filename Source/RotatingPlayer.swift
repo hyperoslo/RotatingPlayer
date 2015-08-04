@@ -5,7 +5,7 @@ protocol VideoControllerDelegate {
   func videoControllerWasDismissed()
 }
 
-class VideoController: UIViewController {
+public class VideoController: UIViewController {
 
   var isPresented = true
   var delegate: VideoControllerDelegate?

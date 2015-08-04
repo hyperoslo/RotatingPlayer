@@ -8,7 +8,7 @@ public protocol RotatingPlayerDelegate {
   public class RotatingPlayer: UIViewController {
 
   public var isPresented = true
-  public var delegate: RotatingPlayerDelegate?
+  public weak var delegate: RotatingPlayerDelegate?
   public var player: MPMoviePlayerController
 
   public init(url: NSURL, delegate: RotatingPlayerDelegate? = nil) {

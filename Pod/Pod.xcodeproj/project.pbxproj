@@ -12,7 +12,7 @@
 		14C136541AB784B200B7B07A /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		14C136551AB784B200B7B07A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		14C1365C1AB784BC00B7B07A /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		79CB62D91B709CFF0040DA69 /* JustPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustPlayer.swift; sourceTree = "<group>"; };
+		79CB62D91B709CFF0040DA69 /* RotatingPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -48,7 +48,7 @@
 		14C1365B1AB784BC00B7B07A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				79CB62D91B709CFF0040DA69 /* JustPlayer.swift */,
+				79CB62D91B709CFF0040DA69 /* RotatingPlayer.swift */,
 				14C1365C1AB784BC00B7B07A /* .gitkeep */,
 			);
 			name = Source;

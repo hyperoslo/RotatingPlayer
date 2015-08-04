@@ -5,13 +5,13 @@ protocol VideoControllerDelegate {
   func videoControllerWasDismissed()
 }
 
-public class VideoController: UIViewController {
+  class VideoController: UIViewController {
 
-  var isPresented = true
-  var delegate: VideoControllerDelegate?
-  var player: MPMoviePlayerController
+  public var isPresented = true
+  public var delegate: VideoControllerDelegate?
+  public var player: MPMoviePlayerController
 
-  init(url: NSURL, delegate: VideoControllerDelegate? = nil) {
+  public init(url: NSURL, delegate: VideoControllerDelegate? = nil) {
     self.delegate = delegate
     self.player = MPMoviePlayerController(contentURL: url)
     super.init(nibName: nil, bundle: nil)

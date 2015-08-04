@@ -11,7 +11,7 @@ public protocol RotatingPlayerDelegate {
   public var delegate: RotatingPlayerDelegate?
   public var player: MPMoviePlayerController
 
-  public init(url: NSURL, delegate: VideoControllerDelegate? = nil) {
+  public init(url: NSURL, delegate: RotatingPlayerDelegate? = nil) {
     self.delegate = delegate
     self.player = MPMoviePlayerController(contentURL: url)
     super.init(nibName: nil, bundle: nil)

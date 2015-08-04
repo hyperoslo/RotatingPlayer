@@ -1,7 +1,7 @@
 import UIKit
 import MediaPlayer
 
-protocol VideoControllerDelegate {
+public protocol VideoControllerDelegate {
   func videoControllerWasDismissed()
 }
 
@@ -17,7 +17,7 @@ protocol VideoControllerDelegate {
     super.init(nibName: nil, bundle: nil)
   }
 
-  required init(coder aDecoder: NSCoder) {
+  required public init(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 

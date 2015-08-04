@@ -5,7 +5,7 @@ public protocol VideoControllerDelegate {
   func videoControllerWasDismissed()
 }
 
-  class VideoController: UIViewController {
+  public class VideoController: UIViewController {
 
   public var isPresented = true
   public var delegate: VideoControllerDelegate?
@@ -21,7 +21,7 @@ public protocol VideoControllerDelegate {
     fatalError("init(coder:) has not been implemented")
   }
 
-  override func viewDidLoad() {
+  override public func viewDidLoad() {
     player.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
     player.view.sizeToFit()
     player.scalingMode = MPMovieScalingMode.AspectFit
@@ -43,20 +43,20 @@ public protocol VideoControllerDelegate {
     presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
   }
 
-  override func viewDidLayoutSubviews() {
+  override public func viewDidLayoutSubviews() {
     player.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
   }
 
-  override func viewDidAppear(animated: Bool) {
+  override public func viewDidAppear(animated: Bool) {
     UIApplication.sharedApplication().setStatusBarHidden(true,
       withAnimation: .Fade)
   }
 
-  override func viewDidDisappear(animated: Bool) {
+  override public func viewDidDisappear(animated: Bool) {
     delegate?.videoControllerWasDismissed()
   }
 
-  override func viewWillDisappear(animated: Bool) {
+  override public func viewWillDisappear(animated: Bool) {
     UIApplication.sharedApplication().setStatusBarHidden(false,
       withAnimation: .Fade)
   }

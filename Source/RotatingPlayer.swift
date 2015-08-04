@@ -1,11 +1,11 @@
 import UIKit
 import MediaPlayer
 
-public protocol VideoControllerDelegate {
-  func videoControllerWasDismissed()
+public protocol RotatingPlayerDelegate {
+  func rotatingPlayerWasDismissed()
 }
 
-  public class VideoController: UIViewController {
+  public class RotatingPlayer: UIViewController {
 
   public var isPresented = true
   public var delegate: VideoControllerDelegate?

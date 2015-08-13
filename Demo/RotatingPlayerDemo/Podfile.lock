@@ -1,0 +1,14 @@
+PODS:
+  - RotatingPlayer (0.1.0)
+
+DEPENDENCIES:
+  - RotatingPlayer (from `../../`)
+
+EXTERNAL SOURCES:
+  RotatingPlayer:
+    :path: ../../
+
+SPEC CHECKSUMS:
+  RotatingPlayer: 6ff05d1e9ca6828c4185ee41c9d08b2c436be311
+
+COCOAPODS: 0.37.2

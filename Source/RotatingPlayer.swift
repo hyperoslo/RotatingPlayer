@@ -8,7 +8,11 @@ public protocol RotatingPlayerDelegate: class {
 public class RotatingPlayer: UIViewController {
 
   public var isPresented = true
-  public var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+  public var activityIndicator = {
+  let indicator =  UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+  indicator.center = self.view.center
+  return view
+  }()
   public weak var delegate: RotatingPlayerDelegate?
   public var player: MPMoviePlayerController
 

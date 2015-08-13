@@ -10,8 +10,7 @@ public class RotatingPlayer: UIViewController {
   public var isPresented = true
   public var activityIndicator = {
   let indicator =  UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
-  indicator.center = self.view.center
-  return view
+  return indicator
   }()
   public weak var delegate: RotatingPlayerDelegate?
   public var player: MPMoviePlayerController
@@ -36,6 +35,7 @@ public class RotatingPlayer: UIViewController {
     player.repeatMode = MPMovieRepeatMode.One
     player.play()
     player.backgroundView.addSubview(activityIndicator)
+    indicator.center = player.backgroundView.center
     activityIndicator.startAnimating()
     self.view.addSubview(player.view)
     subscribe()

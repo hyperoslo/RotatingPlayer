@@ -5,9 +5,10 @@ public protocol RotatingPlayerDelegate: class {
   func rotatingPlayerWasDismissed()
 }
 
-  public class RotatingPlayer: UIViewController {
+public class RotatingPlayer: UIViewController {
 
   public var isPresented = true
+  public var activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
   public weak var delegate: RotatingPlayerDelegate?
   public var player: MPMoviePlayerController
 
@@ -30,6 +31,8 @@ public protocol RotatingPlayerDelegate: class {
     player.movieSourceType = MPMovieSourceType.File
     player.repeatMode = MPMovieRepeatMode.One
     player.play()
+    player.backgroundView.addSubview(activityIndicator)
+    activityIndicator.startAnimating()
     self.view.addSubview(player.view)
     subscribe()
   }
